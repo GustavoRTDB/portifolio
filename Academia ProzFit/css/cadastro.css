@@ -1,0 +1,143 @@
+/* Estilo global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #2F3659, #F25270);  /* Cor de fundo suave */
+  color: #2F3659; /* Cor do texto principal */
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 20px;
+}
+
+h1 {
+  color: #Fff; /* Cor de destaque para o título */
+  text-align: center;
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+/* Estilo do form */
+form {
+  background-color: #FFF; /* Fundo branco para o formulário */
+  border-radius: 10px; /* Bordas arredondadas */
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombras suaves */
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Campo de input e texto */
+label {
+  font-size: 14px;
+  margin-bottom: 5px;
+  display: block;
+  font-weight: bold;
+  color: #2F3659; /* Cor dos rótulos */
+}
+
+input[type="text"], input[type="date"], select, input[type="radio"] {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: #2F3659;
+  background-color: #F9F9F9; /* Cor de fundo para os campos de input */
+  transition: background-color 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="date"]:focus, select:focus {
+  background-color: #F4F4F4; /* Leve mudança de fundo ao focar nos campos */
+  border-color: #F25270; /* Cor de borda ao focar */
+  outline: none;
+}
+
+input[type="radio"] {
+  width: auto;
+  margin-right: 10px;
+}
+
+/* Estilo dos botões */
+button, input[type="reset"], input[type="submit"] {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button {
+  background-color: #F25270; /* Cor do botão "Retornar" */
+  color: #fff;
+}
+
+button:hover {
+  background-color: #D53A56; /* Tom mais escuro ao passar o mouse */
+}
+
+input[type="reset"], input[type="submit"] {
+  background-color: #2F3659; /* Cor dos botões "Limpar" e "Enviar" */
+  color: #fff;
+}
+
+input[type="reset"]:hover, input[type="submit"]:hover {
+  background-color: #1D2A44; /* Tom mais escuro ao passar o mouse */
+}
+
+/* Rodapé */
+footer {
+  margin-top: 40px;
+  font-size: 14px;
+  color: #2F3659;
+  text-align: center;
+}
+
+footer a {
+  color: #F25270; /* Cor para o link no rodapé */
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline; /* Sublinha o link ao passar o mouse */
+}
+
+/* Estilo do fieldset e legenda */
+fieldset {
+  border: 2px solid #FFF; /* Cor de borda para o fieldset */
+  padding: 20px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #2F3659, #F25270);/* Fundo suave para o fieldset */
+}
+
+legend {
+  font-size: 18px;
+  font-weight: bold;
+  color: #F25270; /* Cor do título do fieldset */
+}
+
+/* Ajustes para dispositivos móveis */
+@media (max-width: 768px) {
+  body {
+      padding: 10px;
+  }
+
+  form {
+      padding: 20px;
+      max-width: 100%;
+  }
+
+  h1 {
+      font-size: 28px;
+  }
+
+  label, input[type="text"], input[type="date"], select {
+      font-size: 14px;
+  }
+}

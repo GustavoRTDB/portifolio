@@ -1,0 +1,283 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: white;
+}
+img {
+  border-radius: 2px; /* Arredonda as bordas da imagem */
+}
+
+/* Corpo e fonte */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  background: linear-gradient(135deg, #2F3659, #F25270); /* Degradê do corpo */
+  padding-bottom: 80px; /* Espaço para o rodapé fixo */
+  color: #333; /* Cor padrão do texto */
+  min-height: 100vh; /* Garante que a altura da página ocupe toda a tela */
+}
+
+/* Cabeçalho */
+header {
+  background: linear-gradient(135deg, #2F3659, #F25270); /* Degradê no cabeçalho */
+  color: white;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Garante que o h1 fique centralizado */
+  justify-content: center; /* Centraliza os itens verticalmente */
+  text-align: center;
+}
+
+/* Logo no cabeçalho */
+header .logo h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+}
+
+img#imagemlogo {
+
+  width: 100%;
+  height: "auto";
+
+}
+
+/* Menu */
+.menu-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center; /* Centraliza o menu horizontalmente */
+  padding: 0;
+}
+
+.menu {
+  background-color: #2F3659;
+  display: flex; /* Organiza os itens em linha */
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  border-radius: 20px; /* Adiciona bordas arredondadas ao menu principal */
+}
+
+.menu > li {
+  position: relative;
+}
+
+.menu a {
+  color: #fff;
+  padding: 12px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.3s ease;
+  border-radius: 20px; /* Adiciona bordas arredondadas aos links do menu */
+}
+
+.menu a:hover {
+  background-color: #F25270; /* Cor de hover do menu */
+}
+
+/* Submenu */
+.submenu {
+  display: none;
+  position: absolute;
+  background-color: rgba(47, 54, 89, 0.8); /* Cor de fundo transparente com borrado */
+  backdrop-filter: blur(10px); /* Aplica o efeito de desfoque no submenu */
+  width: 200px;
+  padding: 10px;
+  list-style: none;
+  top: 90%;
+  left: 0;
+  z-index: 2;
+  border-radius: 10px; /* Adiciona bordas arredondadas ao submenu */
+}
+
+.menu > li:hover > .submenu {
+  display: block;
+}
+
+.submenu a {
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  display: block;
+  border-radius: 10px; /* Arredonda as bordas dos links do submenu */
+}
+
+.submenu a:hover {
+  background-color: #F25270; /* Cor de hover do submenu */
+  color: #fff;
+}
+
+/* Carrossel */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  height: 500px;
+  margin: 40px auto;
+  overflow: visible;
+  background: transparent; /* Garantir que o carrossel tenha fundo transparente */
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 100%;
+}
+
+.carousel img {
+  position: absolute;
+  width: 40%;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  opacity: 0.5;
+  filter: blur(5px);
+  border-radius: 20px;
+}
+
+.carousel img.active {
+  width: 50%;
+  opacity: 1;
+  filter: blur(0);
+  transform: scale(1.1);
+  z-index: 2;
+}
+
+.carousel img.left {
+  transform: translateX(-120%) scale(0.8);
+  z-index: 1;
+}
+
+.carousel img.right {
+  transform: translateX(120%) scale(0.8);
+  z-index: 1;
+}
+
+button#next,button#prev {
+  position:absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #BFBB84;
+  color: #2F3659;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 22px;
+  border-radius: 5px;
+  z-index: 4;
+  transition: background-color 0.3s ease;
+}
+
+button#next:hover,button#prev:hover {
+  background: #F25270; /* Cor de hover dos botões */
+  color: #fff
+}
+
+#prev {
+  left: 10px;
+}
+
+#next {
+  right: 10px;
+}
+
+/* Planos */
+.info {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px;
+  flex-wrap: wrap;
+  gap: 20px;
+  color: white; /* Escritas em branco dentro da classe .info */
+}
+
+.black, .proz {
+  background: #2F3659;
+  padding: 30px;
+  border-radius: 20px;
+  width: 45%;
+  min-width: 280px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+  color: white; /* Escritas em branco dentro das caixas */
+  text-align: center;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+p {
+  font-size: 16px;
+  margin: 5px 0;
+  color: #fff; /* Texto em branco */
+}
+
+.preco {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.preco span {
+  font-size: 30px;
+}
+
+.detalhe {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.fidelidade {
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+.botao {
+  display: inline-block;
+  background-color: #BFBB84;
+  color: #2F3659;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.botao:hover {
+  background-color: #F25270; /* Cor de hover do botão */
+  color: #fff;
+}
+
+/* Rodapé */
+footer {
+  background-color: #2F3659;
+  color: white; /* Escritas em branco no rodapé */
+  text-align: center;
+  padding: 20px 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+/* Ajuste responsivo para telas menores */
+@media (max-width: 768px) {
+  .info {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .benefits, .pricing {
+      width: 80%;
+  }
+}
